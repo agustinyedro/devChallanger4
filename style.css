@@ -1,0 +1,154 @@
+:root{
+    --font: "Be Vietnam Pro", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+ font-family: var(--font);
+ background: url(bg-image.svg) no-repeat center center;
+ background-size: cover;
+
+}
+.logo{
+    margin-top:15px;
+    margin-left: 50px;
+}
+h1{
+    font-size:4rem ;
+    width: 50%;
+    margin:15px auto ;
+    color: white;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size:2rem ;
+    width: 50%;
+    margin:15px auto ;
+}
+.container{
+    color: white;
+    display: flex ;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    border-radius: 15px;
+    background-color: #ffffff40;
+    padding: 30px;
+    padding-right: 20px;
+}
+
+.column {
+    flex:1;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  .column.custom-select {
+    position: relative;
+    width: 100%;
+  }
+  .column.custom-select select {
+    appearance: none;
+  }
+  .column.custom-select::before {
+    content: url('Expand_down.svg'); 
+    position: absolute;
+    top: 55%;
+    right: 20px;
+    
+    width: 20px; /* Ajusta el ancho según tus necesidades 2*/
+    height: 20px; /* Ajusta la altura según tus necesidades */
+    pointer-events: none;
+  }
+  .input{
+    width: 100%;
+      padding: 20px;
+      border-radius: 15px;
+      border: none;
+  }
+  label{
+    font-size: 12px;
+    margin:10px 0;
+  }
+  button{
+    margin-bottom: 80px;
+    margin-top: 20px;
+    width: 98%;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    color: #4036A9;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 640px) {
+    h1{
+      font-size:2.3rem ;
+    }
+    h2{
+      font-size:1rem ;
+    }
+    form {
+      flex-direction: column;
+      height: auto;
+      padding-right: 30px;
+    }
+    .column {
+      flex: 100%;
+      
+    }
+  }
+  @media screen and (min-width: 641px) and (max-width: 1024px){
+    h1{
+      font-size:3rem ;
+    }
+    h2{
+      font-size:1.5rem ;
+    }
+    form{
+     padding: auto;
+
+    }
+    .column{ 
+        flex: 0 0 48%;
+        
+  }
+  .column.message{
+    flex: 0 0 98%;
+  }
+  button{
+    margin-bottom: 20px;
+  }
+}
+  @media screen and (min-width: 1025px) {
+    form{
+        width: 70%;
+        
+    }
+    .column{ 
+        flex: 0 0 48%;
+        margin-right: 10px; 
+  }
+  .column.message{
+    flex: 0 0 98%;
+  }
+  button{
+    margin-bottom: 20px;
+  }
+  }
